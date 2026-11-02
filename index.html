@@ -157,7 +157,7 @@ summary{cursor:pointer;color:var(--mute);font-size:14px}
       var who=state.people.map(function(p){
         var on=e.who.indexOf(p.id)>-1,w=e.w[p.id]||1;
         return '<span class="pw"><label><input type="checkbox" data-k="part" data-e="'+e.id+'" data-p="'+p.id+'"'+(on?" checked":"")+'>'+esc(p.name)+'</label>'+
-          '<input type="number" class="w" inputmode="decimal" min="0.5" step="0.5" data-k="w" data-e="'+e.id+'" data-p="'+p.id+'" value="'+w+'" aria-label="عدد الأنفار"'+(on?"":" hidden")+'></span>';
+          '<input type="number" class="w" inputmode="decimal" min="0.01" step="0.01" data-k="w" data-e="'+e.id+'" data-p="'+p.id+'" value="'+w+'" aria-label="عدد الأنفار"'+(on?"":" hidden")+'></span>';
       }).join("");
       var poolBox='<div class="seg" role="group" aria-label="نوع المصروف"><button type="button" class="'+(e.pool?"":"on")+'" data-act="setPool" data-e="'+e.id+'" data-v="0">حد دفعه من جيبه</button><button type="button" class="'+(e.pool?"on":"")+'" data-act="setPool" data-e="'+e.id+'" data-v="1">بيتلم من الكل</button></div>';
       var payBox='<div class="lbl">اتدفع بواسطة</div>'+pays+'<button class="g" data-act="addPay" data-e="'+e.id+'">+ دفعة تانية</button>';
